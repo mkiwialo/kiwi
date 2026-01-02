@@ -90,6 +90,12 @@
         .btn:hover {
             transform: scale(1.05);
         }
+        
+        a.btn { 
+          display: inline-block; 
+          text-decoration: none; 
+          text-align: center;
+        }        
 
         .btn-easy { background: #22c55e; }
         .btn-easy:hover { background: #16a34a; }
@@ -261,6 +267,7 @@
                 <button class="btn btn-medium" onclick="startGame('medium')">Średni</button>
                 <button class="btn btn-hard" onclick="startGame('hard')">Trudny</button>
             </div>
+            <a class="btn btn-reset" href="../">← Powrót na stronę główną</a>
         </div>
 
         <div id="gameScreen" class="hidden">
