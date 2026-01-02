@@ -220,6 +220,32 @@
                 flex-direction: column;
             }
         }
+
+        /* żeby <a> wyglądał jak przycisk */
+        a.btn{
+          display: inline-block;
+          text-decoration: none;
+        }
+
+        /* pasek na górze w grze */
+        .top-actions{
+          display: flex;
+          justify-content: flex-start; /* możesz dać flex-end, jeśli chcesz po prawej */
+          margin-bottom: 16px;
+        }
+
+        /* styl przycisku "Powrót" */
+        .btn-back{
+          background: rgba(255, 255, 255, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          padding: 12px 16px;     /* trochę mniejszy niż reszta */
+          font-size: 1rem;
+        }
+
+        .btn-back:hover{
+          background: rgba(255, 255, 255, 0.3);
+        }
+
     </style>
 </head>
 <body>
@@ -239,6 +265,9 @@
 
         <div id="gameScreen" class="hidden">
             <div class="game-area">
+                <div class="top-actions">
+                    <a class="btn btn-back" href="../">← Powrót</a>
+                </div>
                 <div class="game-info">
                     <div class="game-title" id="gameTitle">Szachy</div>
                     <div class="game-status" id="turnInfo">Tura: Twoja (białe)</div>
