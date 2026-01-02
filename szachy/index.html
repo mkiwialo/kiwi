@@ -266,7 +266,7 @@
         <div id="gameScreen" class="hidden">
             <div class="game-area">
                 <div class="top-actions">
-                    <button class="btn btn-reset" onclick="goToMenu()">← Powrót</button>
+                    <button class="btn btn-reset" onclick="resetGame()">← Powrót</button>
                 </div>
                 <div class="game-info">
                     <div class="game-title" id="gameTitle">Szachy</div>
@@ -651,17 +651,6 @@
             document.getElementById('gameScreen').classList.add('hidden');
             document.getElementById('menuScreen').classList.remove('hidden');
             difficulty = null;
-        }
-
-        function goToMenu() {
-            // przejście z gry do menu (bez resetowania, jeśli chcesz resetować - patrz wariant niżej)
-            document.getElementById('gameScreen').classList.add('hidden');
-            document.getElementById('menuScreen').classList.remove('hidden');
-
-            // opcjonalnie: wyczyść statusy zaznaczeń
-            selectedSquare = null;
-            validMoves = [];
-            gameStatus = '';
         }
 
     </script>
